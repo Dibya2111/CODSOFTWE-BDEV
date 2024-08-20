@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282c34;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background-color: #1e90ff; /* Blue color */
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    padding: 20px;
+}
+
+.display {
+    background-color: #2e2e3f;
+    color: #ffffff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: #373747;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #47475c;
+}
+
+.zero-btn {
+    grid-column: span 2; /* Make the '0' button span across 2 columns */
+}
+
+.equal-btn {
+    grid-row: 4 / span 2; /* Make the '=' button start at row 4 and span 2 rows */
+    grid-column: 4;       /* Place the '=' button in the last column */
+    background-color: #4caf50;
+    padding: 40px 20px;   /* Adjust padding to make it rectangular */
+}
+
+.equal-btn:hover {
+    background-color: #45a045;
+}
