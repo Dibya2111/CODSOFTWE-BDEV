@@ -2,7 +2,7 @@ let display = document.getElementById('display');
 let currentInput = '';
 let lastInput = '';
 
-function appendNumber(number) {
+function addNumber(number) {
     if (lastInput === '=') {
         clearDisplay();
         lastInput = '';
@@ -14,7 +14,7 @@ function appendNumber(number) {
     display.innerText = currentInput;
 }
 
-function appendOperator(operator) {
+function addOperator(operator) {
     if (lastInput === '=') {
         lastInput = '';
     }
