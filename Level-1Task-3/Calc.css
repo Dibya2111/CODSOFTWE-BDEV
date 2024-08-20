@@ -7,15 +7,13 @@ body {
     background-color: #282c34;
     font-family: Arial, sans-serif;
 }
-
 .calculator {
-    background-color: #1e90ff; /* Blue color */
+    background-color: #1e90ff; 
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
     width: 320px;
     padding: 20px;
 }
-
 .display {
     background-color: #2e2e3f;
     color: #ffffff;
@@ -26,14 +24,12 @@ body {
     margin-bottom: 20px;
     overflow: hidden;
 }
-
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 10px;
 }
-
 .btn {
     background-color: #373747;
     color: #ffffff;
@@ -44,22 +40,69 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
-
 .btn:hover {
     background-color: #47475c;
 }
-
 .zero-btn {
-    grid-column: span 2; /* Make the '0' button span across 2 columns */
+    grid-column: span 2; 
 }
-
 .equal-btn {
-    grid-row: 4 / span 2; /* Make the '=' button start at row 4 and span 2 rows */
-    grid-column: 4;       /* Place the '=' button in the last column */
+    grid-row: 4 / span 2; 
+    grid-column: 4;       
     background-color: #4caf50;
-    padding: 40px 20px;   /* Adjust padding to make it rectangular */
+    padding: 40px 20px;   
 }
-
 .equal-btn:hover {
     background-color: #45a045;
+}
+@media screen and (max-width: 768px) {
+    .calculator {
+        width: 280px;
+        padding: 15px;
+    }
+    .display {
+        padding: 15px;
+        font-size: 1.8em;
+    }
+    .btn {
+        padding: 15px;
+        font-size: 1.3em;
+    }
+    .equal-btn {
+        padding: 30px 15px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .calculator {
+        width: 240px;
+        padding: 10px;
+    }
+    .display {
+        padding: 10px;
+        font-size: 1.6em;
+    }
+    .btn {
+        padding: 12px;
+        font-size: 1.1em;
+    }
+    .equal-btn {
+        padding: 25px 12px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .calculator {
+        width: 200px;
+        padding: 8px;
+    }
+    .display {
+        padding: 8px;
+        font-size: 1.4em;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 1em;
+    }
+    .equal-btn {
+        padding: 20px 10px; 
+    }
 }
