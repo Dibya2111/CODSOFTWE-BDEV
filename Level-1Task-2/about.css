@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #081b29, #0ef);
+    color: #ededed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: rgba(8, 27, 41, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #0ef;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0ef;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 35px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #0ef;
+}
+
+.about {
+    padding: 100px 5% 50px;
+    flex-grow: 1;
+}
+
+.about h1 {
+    font-size: 48px;
+    color: #0ef;
+    margin-bottom: 30px;
+    text-align: center;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-box {
+    flex: 1 1 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+.info-box h2 {
+    font-size: 24px;
+    color: #0ef;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.bio {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+.bio h2 {
+    font-size: 24px;
+    color: #0ef;
+    margin-bottom: 20px;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.resume-download {
+    text-align: center;
+    margin-top: 40px;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
+    transition: all 0.3s ease;
+}
+
+.btn-box:hover {
+    background: #fff;
+    color: #081b29;
+    box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 100px #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(8, 27, 41, 0.7);
+    margin-top: auto;
+}
+
+@media (max-width: 1024px) {
+    .about h1 {
+        font-size: 40px;
+    }
+    .info-box, .bio {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(8, 27, 41, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        margin: 10px 0;
+    }
+    .about {
+        padding: 80px 5% 40px;
+    }
+    .about h1 {
+        font-size: 36px;
+    }
+    .info-box h2, .bio h2 {
+        font-size: 22px;
+    }
+    .info-box p, .bio p {
+        font-size: 14px;
+    }
+    .btn-box {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    .about h1 {
+        font-size: 30px;
+    }
+    .info-box, .bio {
+        padding: 20px;
+    }
+    .info-box h2, .bio h2 {
+        font-size: 20px;
+    }
+    .btn-box {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}

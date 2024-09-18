@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibya Jyoti Dash - Skills</title>
+    <link rel="stylesheet" href="./skills.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Skills</a></li>
+                <li><a href="./Projects.html">Projects</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="skills">
+        <h1>My Skills</h1>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h2>Programming Languages</h2>
+                <div class="skill-items">
+                    <div class="skill-item" style="--i:1;">
+                        <i class='bx bxl-java'></i>
+                        <span>Java</span>
+                        <div class="skill-level">90%</div>
+                        <div class="skill-progress" style="--percent: 90%;"></div>
+                    </div>
+                    <div class="skill-item" style="--i:2;">
+                        <i class='bx bxl-python'></i>
+                        <span>Python</span>
+                        <div class="skill-level">85%</div>
+                        <div class="skill-progress" style="--percent: 85%;"></div>
+                    </div>
+                    <div class="skill-item" style="--i:3;">
+                        <i class='bx bxl-c-plus-plus'></i>
+                        <span>C++</span>
+                        <div class="skill-level">80%</div>
+                        <div class="skill-progress" style="--percent: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h2>Web Technologies</h2>
+                <div class="skill-items">
+                    <div class="skill-item" style="--i:4;">
+                        <i class='bx bxl-html5'></i>
+                        <span>HTML5</span>
+                        <div class="skill-level">95%</div>
+                        <div class="skill-progress" style="--percent: 95%;"></div>
+                    </div>
+                    <div class="skill-item" style="--i:5;">
+                        <i class='bx bxl-css3'></i>
+                        <span>CSS3</span>
+                        <div class="skill-level">90%</div>
+                        <div class="skill-progress" style="--percent: 90%;"></div>
+                    </div>
+                    <div class="skill-item" style="--i:6;">
+                        <i class='bx bxl-javascript'></i>
+                        <span>JavaScript</span>
+                        <div class="skill-level">85%</div>
+                        <div class="skill-progress" style="--percent: 85%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h2>Tools & Technologies</h2>
+                <div class="skill-items">
+                    <div class="skill-item" style="--i:7;">
+                        <i class='bx bxl-git'></i>
+                        <span>Git</span>
+                        <div class="skill-level">88%</div>
+                        <div class="skill-progress" style="--percent: 88%;"></div>
+                    </div>
+                    <div class="skill-item" style="--i:8;">
+                        <i class='bx bxl-github'></i>
+                        <span>GitHub</span>
+                        <div class="skill-level">92%</div>
+                        <div class="skill-progress" style="--percent: 92%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dibya Jyoti Dash. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });        
+    </script>
+</body>
+</html>

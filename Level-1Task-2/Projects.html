@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Dibya Jyoti Dash</title>
+    <link rel="stylesheet" href="./Index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .projects-container {
+            padding: 100px 5% 50px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 238, 255, 0.3);
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-info {
+            padding: 20px;
+        }
+        .project-title {
+            color: #0ef;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .project-description {
+            color: #ededed;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #0ef;
+            color: #081b29;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .project-link:hover {
+            background: #fff;
+            box-shadow: 0 0 10px #0ef;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" style="--i:1">Home</a></li>
+                <li><a href="./Skills.html" style="--i:2">Skills</a></li>
+                <li><a href="Projects.html" style="--i:3" class="active">Projects</a></li>
+                <li><a href="Contact.html" style="--i:4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="projects-container">
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="./Screenshot 2024-09-18 163930.png" alt="Project 1" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">Cult Fit Clone</h3>
+                    <p class="project-description">Developed a comprehensive fitness and wellness platform inspired by CultFit. This web application provides users with a seamless experience for managing their fitness journey, booking classes, and accessing health-related content.
+
+                        <br>Key Features:
+                        
+                        User authentication and personalized dashboards
+                        Interactive class booking system with real-time availability
+                        Workout tracking and progress visualization
+                        Customized nutrition plans and recipe suggestions
+                        Live streaming integration for online fitness classes
+                        Community forum for user interaction and motivation
+                        E-commerce section for fitness equipment and merchandise
+                        <br>My Role: Spearheaded the full-stack development, implementing the frontend using React.js and Redux for state management. Developed the backend API using Node.js and Express, integrated MongoDB for data storage, and implemented real-time features using Socket.io. Ensured responsive design and cross-browser compatibility.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="./Screenshot 2024-09-18 164900.png" alt="Project 2" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-title">ECOMMERCE Web Site With Cart</h3>
+                    <p class="project-description">Developed a fully functional e-commerce website with a robust shopping cart system. This project showcases a user-friendly interface for browsing products, adding items to cart, and completing purchases securely.
+
+                        <br>Key Features:
+                        
+                        Responsive product catalog with search and filter options
+                        Dynamic shopping cart with real-time updates
+                        Secure user authentication and profile management
+                        Integration with payment gateway for seamless transactions
+                        Order tracking and history for users
+                        Admin panel for inventory management and order processing
+                        <br>My Role: Led the frontend development using React.js, implemented the shopping cart functionality, and integrated it with the backend API. Ensured a smooth user experience across devices and optimized performance for quick load times.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./Main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                card.style.animation = `fadeInUp 0.5s ease forwards ${index * 0.1}s`;
+            });
+        });
+    </script>
+</body>
+</html>

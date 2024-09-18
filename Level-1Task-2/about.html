@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Dibya Jyoti Dash</title>
+    <link rel="stylesheet" href="./about.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="navbar">
+            <div class="menu-icon">
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./Index.html" style="--i:1" class="active">Home</a></li>
+                <li><a href="./Skills.html" style="--i:2">Skills</a></li>
+                <li><a href="Projects.html" style="--i:3">Projects</a></li>
+                <li><a href="Contact.html" style="--i:4">Contact</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <section class="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+            <div class="info-box personal-info">
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong> Dibya Jyoti Dash</p>
+                <p><strong>Location:</strong> Cuttack, Odisha, India</p>
+                <p><strong>Email:</strong> dibyajyotidash88@gmail.com</p>
+                <p><strong>Phone:</strong> +91 7605989393</p>
+            </div>
+            <div class="info-box professional-info">
+                <h2>Professional Details</h2>
+                <p><strong>Education:</strong> Bachelor's degree in Computer Science and Engineering, Silicon University, Bhubaneswar</p>
+                <p><strong>Skills:</strong> Programming languages (Java, Python, C++), Data Structures, Algorithms, Web Development</p>
+                <p><strong>Interests:</strong> Artificial Intelligence, Machine Learning, Blockchain Technology</p>
+            </div>
+        </div>
+        <div class="bio">
+            <h2>Biography</h2>
+            <p>I am a passionate and dedicated computer science student with a strong desire to excel in the field. Born and raised in Cuttack, Odisha, I have always been fascinated by technology and its potential to change the world.</p>
+            <p>Currently pursuing my Bachelor's degree at Silicon University, Bhubaneswar, I am constantly expanding my knowledge and skills in various areas of computer science. My goal is to contribute to innovative projects and make a positive impact in the tech industry.</p>
+        </div>
+        <div class="resume-download">
+            <a href="./Dibyajyoti_Dash_Resume.pdf" download class="btn-box">Download Resume</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Dibya Jyoti Dash. All rights reserved.</p>
+    </footer>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });        
+    </script>
+</body>
+</html>
